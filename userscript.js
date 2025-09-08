@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         GeoFS Minimap
-// @version      0.1.1
+// @version      0.1.2
 // @description  Adds the minimap from MSFS2024
 // @author       GGamerGGuy
 // @match        https://geo-fs.com/geofs.php*
@@ -34,7 +34,7 @@ function mmWait() {
             .then(() => {
             setTimeout(afterGMenu, 100);
         });
-    }
+    } else afterGMenu()
 
     function afterGMenu() {
         const mapM = new window.GMenu("Minimap", "mm");
